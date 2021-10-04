@@ -1,8 +1,6 @@
 import numpy as np
 import flask
 from flask import Flask, request, jsonify, render_template
-import pickle
-from model_test import *
 from functions import scraper, data_cleaner
 import numpy as np
 from sklearn.ensemble import RandomForestRegressor
