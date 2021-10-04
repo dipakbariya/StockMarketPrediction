@@ -1,7 +1,6 @@
 import numpy as np
 import flask
 from flask import Flask, request, jsonify, render_template
-from functions import scraper, data_cleaner
 import numpy as np
 from sklearn.ensemble import RandomForestRegressor
 import snscrape.modules.twitter as sntwitter
