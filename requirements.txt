@@ -10,7 +10,5 @@ scikit-learn==0.24.1
 sklearn==0.0
 threadpoolctl==2.1.0
 Werkzeug==1.0.1
-model_test
-functions
 snscrape
 pandas
