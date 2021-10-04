@@ -1,1 +1,1 @@
-web: gunicorn app:app && model_test && functions
+web: gunicorn app:app
