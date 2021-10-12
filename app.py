@@ -258,11 +258,13 @@ def predict():
     pred = rf_2.predict(np.array(test))
     pred = sc2.inverse_transform([pred])
     
+    from IPython.display import HTML
     html = test.to_html()
     text_file = open("index.html", "w")
     text_file.write(html)
     text_file.close()
-    
+    HTML(test.to_html(classes='table table-striped'))
+
     return render_template('index.html', prediction_text='Predicted Close Price is $ {}'.format(round(pred[0][0],2)))
 
 
