@@ -256,7 +256,7 @@ def predict():
     df_all.Day_of_week = le3.transform(df_all.Day_of_week)
     test = df_all[["Year","Month","Day","Stockname","Positive","Negative","Neutral","Volume","Open","High","Low","Day_of_week"]]
     pred = rf_2.predict(np.array(test))
-    pred = round(sc2.inverse_transform(y_pred)[0],4)
+    pred = round(sc2.inverse_transform(pred)[0],4)
 
     return render_template('index.html', prediction_text='Predicted Close Price is $ {}'.format(pred))
 
