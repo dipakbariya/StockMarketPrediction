@@ -258,7 +258,7 @@ def predict():
     pred = rf_2.predict(np.array(test))
     pred = sc2.inverse_transform([pred])
 
-    return render_template('index.html', prediction_text='Predicted Close Price is $ {}'.format(pred))
+    return render_template('index.html', prediction_text='Predicted Close Price is $ {}'.format(pred[0][0]))
 
 
 if __name__ == "__main__":
