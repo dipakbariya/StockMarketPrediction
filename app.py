@@ -11,7 +11,7 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from tqdm import tqdm
 import string
 import re as re
-nltk.download('vader_lexicon')
+
 #Initializing the application name [here, the name is app]
 app = Flask(__name__)
 
