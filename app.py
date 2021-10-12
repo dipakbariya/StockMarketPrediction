@@ -1,10 +1,17 @@
 import numpy as np
 import flask
 from flask import Flask, request, jsonify, render_template
-import numpy as np
 from sklearn.ensemble import RandomForestRegressor
+from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import LabelEncoder
 import snscrape.modules.twitter as sntwitter
 import pandas as pd
+from nltk.tokenize import TweetTokenizer
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
+from tqdm import tqdm
+import string
+import re as re
+nltk.download('vader_lexicon')
 #Initializing the application name [here, the name is app]
 app = Flask(__name__)
 
