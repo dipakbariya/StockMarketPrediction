@@ -264,6 +264,16 @@ def predict():
     text_file.write(html)
     text_file.close()
     HTML(test.to_html(classes='table table-striped'))
+    
+    from csv import writer
+    def append_list_as_row(file_name, list_of_elem):
+        # Open file in append mode
+        with open(file_name, 'a+', newline='') as write_obj:
+            # Create a writer object from csv module
+            csv_writer = writer(write_obj)
+            # Add contents of list as last row in the csv file
+            csv_writer.writerow(list_of_elem)
+    append_list_as_row("Twitter_stock_final_dataset.csv", df_all.iloc[0,:])
 
     return render_template('index.html',data="Data for prediction is: {}".format(HTML(test.to_html(classes='table table-striped'))) ,prediction_text='Predicted Close Price is $ {}'.format(round(pred[0][0],2)))
 
