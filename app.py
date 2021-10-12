@@ -257,7 +257,12 @@ def predict():
     test = df_all[["Year","Month","Day","Stockname","Positive","Negative","Neutral","Volume","Open","High","Low","Day_of_week"]]
     pred = rf_2.predict(np.array(test))
     pred = sc2.inverse_transform([pred])
-
+    
+    html = test.to_html()
+    text_file = open("index.html", "w")
+    text_file.write(html)
+    text_file.close()
+    
     return render_template('index.html', prediction_text='Predicted Close Price is $ {}'.format(round(pred[0][0],2)))
 
 
