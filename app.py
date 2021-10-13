@@ -315,22 +315,22 @@ def predict():
     k.index=k.Date
     A = k.groupby(by='StockName').get_group("apple")
     B = k.groupby(by='StockName').get_group("microsoft")
-#     import matplotlib.pyplot as plt
-#     plt.figure(figsize=(20,8))
-#     ax = plt.subplot(111)
-#     plt.title('Apple Stock Price')
-#     plt.xlabel('Year')
-#     plt.ylabel("Stock Price in $")
-#     ax.legend()
-#     ax.plot(A.index, A.Close,'go--' ,linewidth=1)
-    p = figure(title="Stock Price Plot for Last Month {}".format("apple"), x_axis_label='Date', y_axis_label='Price',
+    import matplotlib.pyplot as plt
+    plt.figure(figsize=(20,8))
+    ax = plt.subplot(111)
+    plt.title('Apple Stock Price')
+    plt.xlabel('Year')
+    plt.ylabel("Stock Price in $")
+    ax.legend()
+    plot1 = ax.plot(A.index, A.Close,'go--' ,linewidth=1)
+    p = figure(title="{} Stock Price Plot Jan 2020- Sep 2021".format("apple"), x_axis_label='Date', y_axis_label='Price',
                    x_axis_type="datetime")
 #     y = list(A.Cloe)
     p.line(A.index, A.Close, legend="{}".format("apple"), line_width=1, color="red")
     script, div = components(p)
 
     return render_template('index.html',prediction_text='Predicted Close Price is $ {}'.format(round(pred[0][0],2)), script='{}'.format(script), div='{}'.format(div))
-#                              render_template('graph.html', div=div, script=script)
+#                              render_template('graph.html', div=div, script=script, plot1='{}'.format(plot1))
                              
 
 
