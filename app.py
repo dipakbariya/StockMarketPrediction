@@ -16,6 +16,7 @@ import string
 import re as re
 from bokeh.plotting import figure, output_file, show
 from bokeh.embed import components
+import base64
 
 #Initializing the application name [here, the name is app]
 app = Flask(__name__)
@@ -293,46 +294,39 @@ def predict():
     pred = rf_2.predict(np.array(test))
     pred = sc2.inverse_transform([pred])
     
-#     from IPython.display import HTML
-#     html = test.to_html()
-#     text_file = open("index.html", "w")
-#     text_file.write(html)
-#     text_file.close()
-#     HTML(test.to_html(classes='table table-striped'))
-    
-#     from csv import writer
-#     def append_list_as_row(file_name, list_of_elem):
-#         # Open file in append mode
-#         with open(file_name, 'a+', newline='') as write_obj:
-#             # Create a writer object from csv module
-#             csv_writer = writer(write_obj)
-#             # Add contents of list as last row in the csv file
-#             csv_writer.writerow(list_of_elem)
-#     append_list_as_row("Twitter_stock_final_dataset.csv", df_all.iloc[0,:])
     
     k = pd.read_csv("Twitter_stock_final_dataset.csv")
     k["Date"] = pd.to_datetime(k[['Day','Month','Year']])
     k.index=k.Date
     A = k.groupby(by='StockName').get_group(str(hashtag1))
-#     B = k.groupby(by='StockName').get_group("microsoft")
-    import matplotlib.pyplot as plt
-    fig = plt.figure(figsize=(20,8))
-#     ax = plt.subplot(111)
-    plt.title('Apple Stock Price')
-    plt.xlabel('Year')
-    plt.ylabel("Stock Price in $")
-#     fig.legend()
-    plt.plot(A.index, A.Close,'go--' ,linewidth=1)
-    fig.suptitle("""matplotlib.figure.Figure.show() function Example\n\n""", fontweight ="bold") 
-    plt.close(fig)
-    O = fig.show()
+
     p = figure(title="{} Stock Price Plot Jan 2020- Sep 2021".format(str(hashtag1)), x_axis_label='Date', y_axis_label='Price',
                    x_axis_type="datetime")
 #     y = list(A.Cloe)
     p.line(A.index, A.Close, legend="{}".format(str(hashtag1)), line_width=1, color="red")
     script, div = components(p)
+    
+    fig = Figure()
+    axis = fig.add_subplot(1, 1, 1)
+    axis.set_title("title")
+    axis.set_xlabel("Year")
+    axis.set_ylabel("Stock Price")
+    axis.grid()
+    axis.plot(A.index, A.Close, "ro-")
+    
+    # Convert plot to PNG image
+    pngImage = io.BytesIO()
+    FigureCanvas(fig).print_png(pngImage)
+    
+    # Encode PNG image to base64 string
+    pngImageB64String = "data:image/png;base64,"
+    pngImageB64String += base64.b64encode(pngImage.getvalue()).decode('utf8')
+    
+#     return render_template("image.html", image=pngImageB64String)
 
-    return render_template('index.html',prediction_text='Predicted Close Price for {} stock is $ {}'.format(hashtag1, round(pred[0][0],2)), script='{}'.format(script), div='{}'.format(div), plot1='{}'.format(fig.show()))
+    
+
+    return render_template('index.html',prediction_text='Predicted Close Price for {} stock is $ {}'.format(hashtag1, round(pred[0][0],2)), script='{}'.format(script), div='{}'.format(div), plot1='{}'.format(pngImageB64String))
 
 
 if __name__ == "__main__":
