@@ -14,6 +14,8 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from tqdm import tqdm
 import string
 import re as re
+from bokeh.plotting import figure, output_file, show
+from bokeh.embed import components
 
 #Initializing the application name [here, the name is app]
 app = Flask(__name__)
