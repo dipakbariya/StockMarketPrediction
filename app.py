@@ -275,7 +275,7 @@ def predict():
             csv_writer.writerow(list_of_elem)
     append_list_as_row("Twitter_stock_final_dataset.csv", df_all.iloc[0,:])
     
-    k= pd.read_csv("/content/drive/MyDrive/Dipak/Internship/Technocolab/Twitter_stock_final_dataset.csv")
+    k= pd.read_csv("Twitter_stock_final_dataset.csv")
     k["Date"] = pd.to_datetime(k[['Day','Month','Year']])
     k.index=k.Date
     A = k.groupby(by='StockName').get_group("apple")
