@@ -1,6 +1,7 @@
 import numpy as np
 import flask
 from flask import Flask, request, jsonify, render_template, Response
+from matplotlib.figure import Figure
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.preprocessing import StandardScaler
@@ -40,7 +41,7 @@ def plot_png():
     B = k.groupby(by='StockName').get_group("microsoft")
     import matplotlib.pyplot as plt
     
-    fig = plt.figure(figsize=(20,8))
+#     fig = plt.figure(figsize=(20,8))
     axis = fig.add_subplot(1, 1, 1)
     xs = A.index
     ys = A.close
