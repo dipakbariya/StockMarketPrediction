@@ -293,12 +293,12 @@ def predict():
     pred = rf_2.predict(np.array(test))
     pred = sc2.inverse_transform([pred])
     
-    from IPython.display import HTML
-    html = test.to_html()
-    text_file = open("index.html", "w")
-    text_file.write(html)
-    text_file.close()
-    HTML(test.to_html(classes='table table-striped'))
+#     from IPython.display import HTML
+#     html = test.to_html()
+#     text_file = open("index.html", "w")
+#     text_file.write(html)
+#     text_file.close()
+#     HTML(test.to_html(classes='table table-striped'))
     
 #     from csv import writer
 #     def append_list_as_row(file_name, list_of_elem):
@@ -315,30 +315,24 @@ def predict():
     k.index=k.Date
     A = k.groupby(by='StockName').get_group("apple")
     B = k.groupby(by='StockName').get_group("microsoft")
-    import matplotlib.pyplot as plt
-    plt.figure(figsize=(20,8))
-    ax = plt.subplot(111)
-    plt.title('Apple Stock Price')
-    plt.xlabel('Year')
-    plt.ylabel("Stock Price in $")
-    ax.legend()
-    ax.plot(A.index, A.Close,'go--' ,linewidth=1)
-
-    return render_template('index.html',data="Data for prediction is: {}".format(HTML(test.to_html(classes='table table-striped'))) ,prediction_text='Predicted Close Price is $ {}'.format(round(pred[0][0],2)), plot1='\n\n\n\n The first plot is: {}'.format(ax.plot(A.index, A.Close,'go--' ,linewidth=1)))
-
-@app.route('/predict',methods=['GET'])
-def predict():
-    k = pd.read_csv("Twitter_stock_final_dataset.csv")
-    k["Date"] = pd.to_datetime(k[['Day','Month','Year']])
-    k.index=k.Date
-    A = k.groupby(by='StockName').get_group("apple")
-
+#     import matplotlib.pyplot as plt
+#     plt.figure(figsize=(20,8))
+#     ax = plt.subplot(111)
+#     plt.title('Apple Stock Price')
+#     plt.xlabel('Year')
+#     plt.ylabel("Stock Price in $")
+#     ax.legend()
+#     ax.plot(A.index, A.Close,'go--' ,linewidth=1)
     p = figure(title="Stock Price Plot for Last Month {}".format("apple"), x_axis_label='Date', y_axis_label='Price',
                    x_axis_type="datetime")
 #     y = list(A.Cloe)
     p.line(A.index, A.Close, legend="{}".format("apple"), line_width=1, color="red")
     script, div = components(p)
-    return render_template('graph.html', div=div, script=script)
+
+    return render_template('index.html',prediction_text='Predicted Close Price is $ {}'.format(round(pred[0][0],2)),
+                           'graph.html', div=div, script=script)
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)
