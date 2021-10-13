@@ -1,4 +1,5 @@
 import numpy as np
+import io
 import flask
 from flask import Flask, request, jsonify, render_template, Response
 from matplotlib.figure import Figure
