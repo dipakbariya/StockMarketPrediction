@@ -274,8 +274,22 @@ def predict():
             # Add contents of list as last row in the csv file
             csv_writer.writerow(list_of_elem)
     append_list_as_row("Twitter_stock_final_dataset.csv", df_all.iloc[0,:])
+    
+    k= pd.read_csv("/content/drive/MyDrive/Dipak/Internship/Technocolab/Twitter_stock_final_dataset.csv")
+    k["Date"] = pd.to_datetime(k[['Day','Month','Year']])
+    k.index=k.Date
+    A = k.groupby(by='StockName').get_group("apple")
+    B = k.groupby(by='StockName').get_group("microsoft")
+    import matplotlib.pyplot as plt
+    plt.figure(figsize=(20,8))
+    ax = plt.subplot(111)
+    plt.title('Apple Stock Price')
+    plt.xlabel('Year')
+    plt.ylabel("Stock Price in $")
+    ax.legend()
+    ax.plot(A.index, A.Close,'go--' ,linewidth=1)
 
-    return render_template('index.html',data="Data for prediction is: {}".format(HTML(test.to_html(classes='table table-striped'))) ,prediction_text='Predicted Close Price is $ {}'.format(round(pred[0][0],2)))
+    return render_template('index.html',data="Data for prediction is: {}".format(HTML(test.to_html(classes='table table-striped'))) ,prediction_text='Predicted Close Price is $ {}'.format(round(pred[0][0],2)), plot1='\n\n\n\n The first plot is: {}'.format(ax.plot(A.index, A.Close,'go--' ,linewidth=1)))
 
 
 if __name__ == "__main__":
