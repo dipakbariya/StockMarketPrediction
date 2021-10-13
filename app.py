@@ -23,7 +23,7 @@ app = Flask(__name__)
 
 #Loading the model created in model.py
 #model = pickle.load(open('model.pkl', 'rb'))
-
+DATABASE_URL = os.environ['DATABASE_URL']
 #Starting the app by rendering the index.html page
 @app.route('/')
 def home():
@@ -64,6 +64,7 @@ def plot_png():
 #Calling the prediction function using the POST method
 @app.route('/predict',methods=['POST'])
 def predict():
+    
     since = request.form['since_date']
     until = request.form['until_date']
     hashtag1 = request.form['StockName']
