@@ -306,13 +306,14 @@ def predict():
     p.line(A.index, A.Close, legend="{}".format(str(hashtag1)), line_width=1, color="red")
     script, div = components(p)
     
-    fig = Figure()
+    fig = Figure(figsize=(20,8), linewidth=1)
     axis = fig.add_subplot(1, 1, 1)
     axis.set_title("title")
     axis.set_xlabel("Year")
     axis.set_ylabel("Stock Price")
     axis.grid()
-    axis.plot(A.index, A.Close, "ro-")
+    axis.plot(A.index, A.Close)  
+    # "ro-"
     
     # Convert plot to PNG image
     pngImage = io.BytesIO()
