@@ -1,5 +1,5 @@
 matplotlib
-bokeh
+bokeh==0.12.14
 plotly
 numpy>=1.9.2
 flask==1.1.2
