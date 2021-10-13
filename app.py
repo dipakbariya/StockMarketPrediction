@@ -329,8 +329,9 @@ def predict():
     p.line(A.index, A.Close, legend="{}".format("apple"), line_width=1, color="red")
     script, div = components(p)
 
-    return render_template('index.html',prediction_text='Predicted Close Price is $ {}'.format(round(pred[0][0],2)),
-                           'graph.html', div=div, script=script)
+    return [render_template('index.html',prediction_text='Predicted Close Price is $ {}'.format(round(pred[0][0],2))),
+                             render_template('graph.html', div=div, script=script)]
+                             
 
 
 
