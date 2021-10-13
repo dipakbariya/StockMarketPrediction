@@ -1,6 +1,7 @@
 import numpy as np
 import flask
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, Response
+from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import LabelEncoder
@@ -24,23 +25,34 @@ def home():
     return render_template('index.html')
 
 @app.route('/plot',methods=['GET'])
-def plot():
-
+def plot_png():
+    
+    fig = Figure()
+    
+    
+    
+    
+    
     k = pd.read_csv("Twitter_stock_final_dataset.csv")
     k["Date"] = pd.to_datetime(k[['Day','Month','Year']])
     k.index=k.Date
     A = k.groupby(by='StockName').get_group("apple")
     B = k.groupby(by='StockName').get_group("microsoft")
     import matplotlib.pyplot as plt
-    plt.figure(figsize=(20,8))
-    ax = plt.subplot(111)
+    
+    fig = plt.figure(figsize=(20,8))
+    axis = fig.add_subplot(1, 1, 1)
+    xs = A.index
+    ys = A.close
+    axis.plot(xs, ys)
     plt.title('Apple Stock Price')
     plt.xlabel('Year')
     plt.ylabel("Stock Price in $")
-    ax.legend()
-    ax.plot(A.index, A.Close,'go--' ,linewidth=1)
-    my_plot_div = plot([Scatter(x=A.index, y=A.Close)], output_type='div')
-    return render_template('index.html',div_placeholder=Markup(my_plot_div))
+    
+    output = io.BytesIO()
+    FigureCanvas(fig).print_png(output)
+#     my_plot_div = plot([Scatter(x=A.index, y=A.Close)], output_type='div')
+    return Response(output.getvalue(), mimetype='image/png')
 
 
 
