@@ -315,7 +315,7 @@ def predict():
     axis.plot(A.index, A.Close)  
     # "ro-"
     
-    Convert plot to PNG image
+#     Convert plot to PNG image
     pngImage = io.BytesIO()
     FigureCanvas(fig).print_png(pngImage)
     
