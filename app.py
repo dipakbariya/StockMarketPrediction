@@ -44,11 +44,11 @@ def plot_png():
 #     fig = plt.figure(figsize=(20,8))
     axis = fig.add_subplot(1, 1, 1)
     xs = A.index
-    ys = A.close
+    ys = A.Close
     axis.plot(xs, ys)
-    plt.title('Apple Stock Price')
-    plt.xlabel('Year')
-    plt.ylabel("Stock Price in $")
+#     plt.title('Apple Stock Price')
+#     plt.xlabel('Year')
+#     plt.ylabel("Stock Price in $")
     
     output = io.BytesIO()
     FigureCanvas(fig).print_png(output)
