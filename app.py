@@ -315,7 +315,7 @@ def predict():
     axis.plot(A.index, A.Close)  
     # "ro-"
     
-    # Convert plot to PNG image
+    Convert plot to PNG image
     pngImage = io.BytesIO()
     FigureCanvas(fig).print_png(pngImage)
     
@@ -332,7 +332,7 @@ def predict():
 
     
 
-    return render_template('index.html',prediction_text='Predicted Close Price for {} stock is $ {}'.format(hashtag1, round(pred[0][0],2)), script='{}'.format(script), div='{}'.format(div), plot1 = pngImageB64String, RE='{}'.format(RE))
+    return render_template('index.html',prediction_text='Predicted Close Price for {} stock is $ {}'.format(hashtag1, round(pred[0][0],2)), plot1 = pngImageB64String)   #, script='{}'.format(script), div='{}'.format(div)
 
 
 if __name__ == "__main__":
