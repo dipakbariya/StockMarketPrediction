@@ -290,7 +290,9 @@ def predict():
     ax.plot(A.index, A.Close,'go--' ,linewidth=1)
 
     return render_template('index.html',data="Data for prediction is: {}".format(HTML(test.to_html(classes='table table-striped'))) ,prediction_text='Predicted Close Price is $ {}'.format(round(pred[0][0],2)), plot1='\n\n\n\n The first plot is: {}'.format(ax.plot(A.index, A.Close,'go--' ,linewidth=1)))
-if request.method == 'POST':
+@app.route('/predict',methods=['POST'])
+def plot():
+
     k = pd.read_csv("Twitter_stock_final_dataset.csv")
     k["Date"] = pd.to_datetime(k[['Day','Month','Year']])
     k.index=k.Date
@@ -305,9 +307,7 @@ if request.method == 'POST':
     ax.legend()
     ax.plot(A.index, A.Close,'go--' ,linewidth=1)
     my_plot_div = plot([Scatter(x=A.index, y=A.Close)], output_type='div')
-    return render_template('index.html',
-                           div_placeholder=Markup(my_plot_div)
-                          )
+    return render_template('index.html',div_placeholder=Markup(my_plot_div))
 
 if __name__ == "__main__":
     app.run(debug=True)
