@@ -308,7 +308,7 @@ def predict():
     
     fig = Figure(figsize=(12,5), linewidth=1)
     axis = fig.add_subplot(1, 1, 1)
-    axis.set_title("title")
+    axis.set_title("{} Stock Price Plot Jan 2020 - Sep 2021".format(str(hashtag1)))
     axis.set_xlabel("Year")
     axis.set_ylabel("Stock Price")
     axis.grid()
