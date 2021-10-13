@@ -313,8 +313,8 @@ def predict():
     k = pd.read_csv("Twitter_stock_final_dataset.csv")
     k["Date"] = pd.to_datetime(k[['Day','Month','Year']])
     k.index=k.Date
-    A = k.groupby(by='StockName').get_group("apple")
-    B = k.groupby(by='StockName').get_group("microsoft")
+    A = k.groupby(by='StockName').get_group(str(hashtag1))
+#     B = k.groupby(by='StockName').get_group("microsoft")
     import matplotlib.pyplot as plt
     plt.figure(figsize=(20,8))
     ax = plt.subplot(111)
@@ -323,13 +323,13 @@ def predict():
     plt.ylabel("Stock Price in $")
     ax.legend()
     plot1 = ax.plot(A.index, A.Close,'go--' ,linewidth=1)
-    p = figure(title="{} Stock Price Plot Jan 2020- Sep 2021".format("apple"), x_axis_label='Date', y_axis_label='Price',
+    p = figure(title="{} Stock Price Plot Jan 2020- Sep 2021".format(str(hashtag1)), x_axis_label='Date', y_axis_label='Price',
                    x_axis_type="datetime")
 #     y = list(A.Cloe)
-    p.line(A.index, A.Close, legend="{}".format("apple"), line_width=1, color="red")
+    p.line(A.index, A.Close, legend="{}".format(str(hashtag1)), line_width=1, color="red")
     script, div = components(p)
 
-    return render_template('index.html',prediction_text='Predicted Close Price is $ {}'.format(round(pred[0][0],2)), script='{}'.format(script), div='{}'.format(div), plot1='{}'.format(plot1))
+    return render_template('index.html',prediction_text='Predicted Close Price for {} stock is $ {}'.format(hashtag1, round(pred[0][0],2)), script='{}'.format(script), div='{}'.format(div), plot1='{}'.format(plot1))
 
 
 if __name__ == "__main__":
