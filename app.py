@@ -326,8 +326,8 @@ def predict():
 
     return render_template('index.html',data="Data for prediction is: {}".format(HTML(test.to_html(classes='table table-striped'))) ,prediction_text='Predicted Close Price is $ {}'.format(round(pred[0][0],2)), plot1='\n\n\n\n The first plot is: {}'.format(ax.plot(A.index, A.Close,'go--' ,linewidth=1)))
 
-@app.route('/graph',methods=['GET'])
-def graph():
+@app.route('/predict',methods=['GET'])
+def predict():
     k = pd.read_csv("Twitter_stock_final_dataset.csv")
     k["Date"] = pd.to_datetime(k[['Day','Month','Year']])
     k.index=k.Date
