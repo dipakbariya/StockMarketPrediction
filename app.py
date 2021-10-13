@@ -316,20 +316,22 @@ def predict():
     A = k.groupby(by='StockName').get_group(str(hashtag1))
 #     B = k.groupby(by='StockName').get_group("microsoft")
     import matplotlib.pyplot as plt
-    plt.figure(figsize=(20,8))
-    ax = plt.subplot(111)
+    fig = plt.figure(figsize=(20,8))
+#     ax = plt.subplot(111)
     plt.title('Apple Stock Price')
     plt.xlabel('Year')
     plt.ylabel("Stock Price in $")
-    ax.legend()
-    plot1 = ax.plot(A.index, A.Close,'go--' ,linewidth=1)
+#     fig.legend()
+    plt.plot(A.index, A.Close,'go--' ,linewidth=1)
+    fig.suptitle("""matplotlib.figure.Figure.show() function Example\n\n""", fontweight ="bold") 
+    O = fig.show()
     p = figure(title="{} Stock Price Plot Jan 2020- Sep 2021".format(str(hashtag1)), x_axis_label='Date', y_axis_label='Price',
                    x_axis_type="datetime")
 #     y = list(A.Cloe)
     p.line(A.index, A.Close, legend="{}".format(str(hashtag1)), line_width=1, color="red")
     script, div = components(p)
 
-    return render_template('index.html',prediction_text='Predicted Close Price for {} stock is $ {}'.format(hashtag1, round(pred[0][0],2)), script='{}'.format(script), div='{}'.format(div), plot1='{}'.format(plt.plot(A.index, A.Close, linewidth=1)))
+    return render_template('index.html',prediction_text='Predicted Close Price for {} stock is $ {}'.format(hashtag1, round(pred[0][0],2)), script='{}'.format(script), div='{}'.format(div), plot1='{}'.format(O))
 
 
 if __name__ == "__main__":
