@@ -306,7 +306,7 @@ def predict():
     p.line(A.index, A.Close, legend="{}".format(str(hashtag1)), line_width=1, color="red")
     script, div = components(p)
     
-    fig = Figure(figsize=(20,8), linewidth=1)
+    fig = Figure(figsize=(12,5), linewidth=1)
     axis = fig.add_subplot(1, 1, 1)
     axis.set_title("title")
     axis.set_xlabel("Year")
