@@ -326,13 +326,19 @@ def predict():
 
     return render_template('index.html',data="Data for prediction is: {}".format(HTML(test.to_html(classes='table table-striped'))) ,prediction_text='Predicted Close Price is $ {}'.format(round(pred[0][0],2)), plot1='\n\n\n\n The first plot is: {}'.format(ax.plot(A.index, A.Close,'go--' ,linewidth=1)))
 
-from bokeh.plotting import figure, show, output_file
+@app.route('/graph',methods=['GET'])
+def graph():
+    k = pd.read_csv("Twitter_stock_final_dataset.csv")
+    k["Date"] = pd.to_datetime(k[['Day','Month','Year']])
+    k.index=k.Date
+    A = k.groupby(by='StockName').get_group("apple")
 
-output_file('image.html')
-p = figure(x_range=(0, 1), y_range=(0, 1))
-
-p.image_url(url=['apple_stock.png'], x=0, y=1, w=0.8, h=0.6)
-show(p)
+    p = figure(title="Stock Price Plot for Last Month {}".format("apple"), x_axis_label='Date', y_axis_label='Price',
+                   x_axis_type="datetime")
+#     y = list(A.Cloe)
+    p.line(A.index, A.Close, legend="{}".format("apple"), line_width=1, color="red")
+    script, div = components(p)
+    return render_template('graph.html', div=div, script=script)
 
 if __name__ == "__main__":
     app.run(debug=True)
