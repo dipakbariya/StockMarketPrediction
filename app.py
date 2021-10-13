@@ -65,7 +65,7 @@ def plot_png():
 def predict():
     since = request.form['since_date']
     until = request.form['until_date']
-    hashtag1 = request.form['hashtag']
+    hashtag1 = request.form['StockName']
     
     old_df = pd.read_csv("Twitter_stock_final_dataset.csv")
     old_df["Date"] = pd.to_datetime(old_df[['Day','Month','Year']])
