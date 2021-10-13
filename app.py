@@ -322,6 +322,13 @@ def predict():
 
     return render_template('index.html',data="Data for prediction is: {}".format(HTML(test.to_html(classes='table table-striped'))) ,prediction_text='Predicted Close Price is $ {}'.format(round(pred[0][0],2)), plot1='\n\n\n\n The first plot is: {}'.format(ax.plot(A.index, A.Close,'go--' ,linewidth=1)))
 
+from bokeh.plotting import figure, show, output_file
+
+output_file('image.html')
+p = figure(x_range=(0, 1), y_range=(0, 1))
+
+p.image_url(url=['apple_stock.png'], x=0, y=1, w=0.8, h=0.6)
+show(p)
 
 if __name__ == "__main__":
     app.run(debug=True)
