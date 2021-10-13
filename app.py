@@ -329,10 +329,7 @@ def predict():
     p.line(A.index, A.Close, legend="{}".format("apple"), line_width=1, color="red")
     script, div = components(p)
 
-    return render_template('index.html',prediction_text='Predicted Close Price is $ {}'.format(round(pred[0][0],2)), script='{}'.format(script), div='{}'.format(div))
-#                              render_template('graph.html', div=div, script=script, plot1='{}'.format(plot1))
-                             
-
+    return render_template('index.html',prediction_text='Predicted Close Price is $ {}'.format(round(pred[0][0],2)), script='{}'.format(script), div='{}'.format(div), plot1='{}'.format(plot1))
 
 
 if __name__ == "__main__":
