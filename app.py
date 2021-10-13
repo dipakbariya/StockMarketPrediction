@@ -332,7 +332,7 @@ def predict():
 
     
 
-    return render_template('index.html',prediction_text='Predicted Close Price for {} stock is $ {}'.format(hashtag1, round(pred[0][0],2)), plot1 = pngImageB64String)   #, script='{}'.format(script), div='{}'.format(div)
+    return render_template('index.html',prediction_text='Predicted Close Price for {} stock is $ {}'.format(hashtag1, round(pred[0][0],2)), script='{}'.format(script), div='{}'.format(div), plot1 = pngImageB64String)   #
 
 
 if __name__ == "__main__":
