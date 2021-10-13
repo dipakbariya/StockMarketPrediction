@@ -324,6 +324,7 @@ def predict():
 #     fig.legend()
     plt.plot(A.index, A.Close,'go--' ,linewidth=1)
     fig.suptitle("""matplotlib.figure.Figure.show() function Example\n\n""", fontweight ="bold") 
+    plt.close(fig)
     O = fig.show()
     p = figure(title="{} Stock Price Plot Jan 2020- Sep 2021".format(str(hashtag1)), x_axis_label='Date', y_axis_label='Price',
                    x_axis_type="datetime")
