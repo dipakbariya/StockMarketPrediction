@@ -1,4 +1,5 @@
 matplotlib
+plotly
 numpy>=1.9.2
 flask==1.1.2
 requests==2.25.1
