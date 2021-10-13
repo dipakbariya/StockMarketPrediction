@@ -1,5 +1,7 @@
 import numpy as np
 import io
+import os
+import psycopg2
 import flask
 from flask import Flask, request, jsonify, render_template, Response
 from matplotlib.figure import Figure
