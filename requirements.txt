@@ -13,4 +13,4 @@ nltk==3.4.5
 tqdm
 yfinance
 IPython
-
+psycopg2
