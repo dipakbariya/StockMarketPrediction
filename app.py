@@ -25,7 +25,7 @@ app = Flask(__name__)
 
 #Loading the model created in model.py
 #model = pickle.load(open('model.pkl', 'rb'))
-DATABASE_URL = os.environ['DATABASE_URL']
+# DATABASE_URL = os.environ['DATABASE_URL']
 #Starting the app by rendering the index.html page
 @app.route('/')
 def home():
