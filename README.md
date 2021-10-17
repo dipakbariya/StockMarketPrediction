@@ -23,9 +23,9 @@ METRICS USED: The performance of a regression model must be reported as an error
 
 Accuracy mectrics we have used in this project are:
 
-Root Mean Squared Error(RMSE)
-Mean Absolute Error(MAE)
-Rsquared value(r2)
+Root Mean Squared Error(RMSE) \n
+Mean Absolute Error(MAE) \n
+Rsquared value(r2) \n
 
 **Modelling**
 
