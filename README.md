@@ -1,4 +1,4 @@
-**# Prediction of Stock Market Price Using Macro Economic Headlines**
+# Prediction of Stock Market Price Using Macro Economic Headlines
 
 **INTRODUCTION**
 
