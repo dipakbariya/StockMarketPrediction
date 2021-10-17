@@ -18,6 +18,11 @@ EDA includes extracting the twitter data based on the stock names viz, Apple, Te
 ![image](https://user-images.githubusercontent.com/63631974/137613734-4f797f13-9eb9-4bd1-955b-37e5e801d48e.png)
 
 
+>Most common negative words
+![image](https://user-images.githubusercontent.com/63631974/137613755-a28a127d-d35d-4239-bec5-61e2ed541a63.png)
+
+
+
 
 
 **Type of Machine Learning**
