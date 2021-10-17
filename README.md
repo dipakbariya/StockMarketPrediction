@@ -14,6 +14,11 @@ Twitter provides a plethora of market data. In this project we have extracted ar
 
 EDA includes extracting the twitter data based on the stock names viz, Apple, Tesla, Nvidia, Paypal and Microsoft, cleaning of twitter data that were pulled i.e., removing unnecessary data from tweets. After cleaning the data, below are the plots that were plotted against the sentiments that is Positive, Negative and Neutral.
 
+>Most common positive words
+![image](https://user-images.githubusercontent.com/63631974/137613734-4f797f13-9eb9-4bd1-955b-37e5e801d48e.png)
+
+
+
 
 **Type of Machine Learning**
 
@@ -37,6 +42,9 @@ We have implemented differnt ML models Linear Regression, Random Forest Regressi
 **Deployment**
 
 We have deployed the model using Streamlit framework, as it is a opensource Python library that allows us to create beautiful web apps for Machine Learning. It is hosted on Heroku, as it a container based Platform As A Service(PAAS), because it is flexible and easy to host on this platform.
+
+![image](https://user-images.githubusercontent.com/63631974/137613691-93de716f-224e-4abf-ba58-fc7a9eac38ae.png)
+
 
 **Links :**
 Application Link
