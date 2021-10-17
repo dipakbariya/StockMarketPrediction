@@ -35,7 +35,11 @@ We have implemented differnt ML models Linear Regression, Random Forest Regressi
 
 We have deployed the model using Streamlit framework, as it is a opensource Python library that allows us to create beautiful web apps for Machine Learning. It is hosted on Heroku, as it a container based Platform As A Service(PAAS), because it is flexible and easy to host on this platform.
 
-** Appilcation Link :
+**Links :**
+Application Link
 [https://stockpriceprediction0.herokuapp.com/](Click Here)
+
+Demo Video
+[https://github.com/dipakbariya/StockMarketPrediction/blob/main/2021-10-16%2012-45-49.mkv](Click Here)
 
 
