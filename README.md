@@ -27,15 +27,15 @@ Root Mean Squared Error(RMSE)
 Mean Absolute Error(MAE)
 Rsquared value(r2)
 
-** Modelling **
+**Modelling**
 
 We have implemented differnt ML models Linear Regression, Random Forest Regression, Decision Tree Regressor. We have choosen Random Forest Regression ML for our project as its r2 - 0.99964, rmse - 3.65. We have choosed Random Forest Regressor model as it classifies decision trees on various subsamples and uses averaging to imporve the predictive accuracy and control overfitting. So, our team decided to apply Random Forest Regression model for our project.
 
-** Deployment **
+**Deployment**
 
 We have deployed the model using Streamlit framework, as it is a opensource Python library that allows us to create beautiful web apps for Machine Learning. It is hosted on Heroku, as it a container based Platform As A Service(PAAS), because it is flexible and easy to host on this platform.
 
 ** Appilcation Link :
-[https://stockpriceprediction0.herokuapp.com/]Click Here
+[https://stockpriceprediction0.herokuapp.com/](Click Here)
 
 
