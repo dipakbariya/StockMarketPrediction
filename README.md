@@ -1,6 +1,6 @@
 # Prediction of Stock Market Price Using Macro Economic Headlines
 
-**INTRODUCTION**
+### **INTRODUCTION**
 
 The stock market is one of the most sensitive fields, where the sentiments of the people can change the trend of the entire market. Actually, there are many factors, affect the movement of the stock market and, the sentiments of the traders are also one of them that drive the market.
 
@@ -12,7 +12,7 @@ On June 2015, 2016 debt negotiations between Greek Govt and its creditors borke 
 
 
 
-**Problem**
+### **Problem**
 
 
 Twitter provides a plethora of market data. In this project we have extracted around 100,000 tweets from various accounts to predict the upward movements. Using this data we are researching how this economic news affects the market.
@@ -23,7 +23,7 @@ Out of the total tweets are examined by humans and annotated as 1 for Positive, 
 Except, in extreme or unexpected conditions, most of the time, machine learning or deep learning-based models predict at very high accuracy helping stock market investors to earn money.
 
 
-**Explaratory Data Analysis:**
+### **Explaratory Data Analysis:**
 
 EDA includes extracting the twitter data based on the stock names viz, Apple, Tesla, Nvidia, Paypal and Microsoft, cleaning of twitter data that were pulled i.e., removing unnecessary data from tweets. After cleaning the data, below are the plots that were plotted against the sentiments that is Positive, Negative and Neutral.
 
@@ -38,7 +38,7 @@ EDA includes extracting the twitter data based on the stock names viz, Apple, Te
 
 
 
-**Type of Machine Learning**
+### **Type of Machine Learning**
 
 This project is Regression based problem, which is a predictive modelling technique that analyzes the relation between the target or dependent variable and independent variable in a dataset.
 
@@ -50,21 +50,21 @@ Root Mean Squared Error(RMSE)
 Mean Absolute Error(MAE) 
 Rsquared value(r2) 
 
-**Modelling**
+### **Modelling**
 
 We have implemented differnt ML models, i.e. Linear Regression, Random Forest Regression, Decision Tree Regressor, Support vector regressor. We have choosen Random Forest Regression model for our project as its r2 - 0.99964, rmse - 0.08. We have choosed Random Forest Regressor model as it classifies decision trees on various subsamples and uses averaging to imporve the predictive accuracy and control overfitting. So, our team decided to apply Random Forest Regression model for our project.
 
 ![image](https://user-images.githubusercontent.com/63631974/137613663-88e25be4-b40f-4876-87eb-2280d14a6ad3.png)
 
 
-**Deployment**
+### **Deployment**
 
 We have deployed the model using Flask framework, as it is a opensource Python library that allows us to create beautiful web apps for Machine Learning. It is hosted on Heroku server, as it a container based Platform As A Service(PAAS), because it is flexible and easy to host on this platform.
 
 ![image](https://user-images.githubusercontent.com/63631974/137613691-93de716f-224e-4abf-ba58-fc7a9eac38ae.png)
 
 
-**Links :**
+### **Links :**
 Application Link
 [https://stockpriceprediction0.herokuapp.com/](Click Here)
 
