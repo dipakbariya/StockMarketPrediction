@@ -6,7 +6,7 @@ The stock market is one of the most sensitive fields, where the sentiments of th
 
 The volatile nature of the stock market has equal chances for earning money and losing money as well. But if the situation can be predicted, investors can make a profit or minimize their losses.
 
->Actually, when a piece of news comes in the market, people start talking about and give their positive or negative opinions that show their sentiments. That can be used by the sentiment analysis experts to predict the movement of the stock market or particular stock of a company.
+> **Actually, when a piece of news comes in the market, people start talking about and give their positive or negative opinions that show their sentiments. That can be used by the sentiment analysis experts to predict the movement of the stock market or particular stock of a company.**
 
 On June 2015, 2016 debt negotiations between Greek Govt and its creditors borke off abrubptly. Large market movements as a concequence of political and economic headlines are hardly uncommon, liquid markets are most suspectable to swing when the news breaks. Using VIX as a proxy for market volatality, we investigate how macroeconoic headlines affect the changes. Here, we predict equity market value using tweets from major news sources, investment banks and notable economists.
 
