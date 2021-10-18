@@ -86,5 +86,5 @@ Accuracy mectrics we have used in this project are:
 ### <p align="center"> **TEAM MEMBERS & CONTACT DETAILS**  </p>  
 * Dipak Bariya: [Linkedin](https://linkedin.com/in/dipak-bariya/)
 * Harshit Singh: 
-* Meet Panchal:
+* Meet Panchal: [Linkedin](https://www.linkedin.com/in/meet-panchal011/)
 * Pratik Thakur:
