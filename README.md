@@ -5,7 +5,12 @@
 On June 2015, 2016 debt negotiations between Greek Govt and its creditors borke off abrubptly. Large market movements as a concequence of political and economic headlines are hardly uncommon, liquid markets are most suspectable to swing when the news breaks. Using VIX as a proxy for market volatality, we investigate how macroeconoic headlines affect the changes. Here, we predict equity market value using tweets from major news sources, investment banks and notable economists.
 
 
+
+
+https://user-images.githubusercontent.com/63631974/137674039-0e918ec9-0b42-4481-aaf2-791d992b3ca4.mp4
+
 **Problem**
+
 
 Twitter provides a plethora of market data. In this project we have extracted around 100,000 tweets from various accounts to predict the upward movements. Using this data we are researching how this economic news affects the market.
 
@@ -39,14 +44,14 @@ Rsquared value(r2)
 
 **Modelling**
 
-We have implemented differnt ML models Linear Regression, Random Forest Regression, Decision Tree Regressor. We have choosen Random Forest Regression ML for our project as its r2 - 0.99964, rmse - 3.65. We have choosed Random Forest Regressor model as it classifies decision trees on various subsamples and uses averaging to imporve the predictive accuracy and control overfitting. So, our team decided to apply Random Forest Regression model for our project.
+We have implemented differnt ML models, i.e. Linear Regression, Random Forest Regression, Decision Tree Regressor, Support vector regressor. We have choosen Random Forest Regression model for our project as its r2 - 0.99964, rmse - 0.08. We have choosed Random Forest Regressor model as it classifies decision trees on various subsamples and uses averaging to imporve the predictive accuracy and control overfitting. So, our team decided to apply Random Forest Regression model for our project.
 
 ![image](https://user-images.githubusercontent.com/63631974/137613663-88e25be4-b40f-4876-87eb-2280d14a6ad3.png)
 
 
 **Deployment**
 
-We have deployed the model using Streamlit framework, as it is a opensource Python library that allows us to create beautiful web apps for Machine Learning. It is hosted on Heroku, as it a container based Platform As A Service(PAAS), because it is flexible and easy to host on this platform.
+We have deployed the model using Flask framework, as it is a opensource Python library that allows us to create beautiful web apps for Machine Learning. It is hosted on Heroku server, as it a container based Platform As A Service(PAAS), because it is flexible and easy to host on this platform.
 
 ![image](https://user-images.githubusercontent.com/63631974/137613691-93de716f-224e-4abf-ba58-fc7a9eac38ae.png)
 
