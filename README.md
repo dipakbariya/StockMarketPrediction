@@ -11,6 +11,8 @@
 
 <p align="justify"> On June 2015, 2016 debt negotiations between Greek Govt and its creditors borke off abrubptly. Large market movements as a concequence of political and economic headlines are hardly uncommon, liquid markets are most suspectable to swing when the news breaks. Using VIX as a proxy for market volatality, we investigate how macroeconoic headlines affect the changes. Here, we predict equity market value using tweets from major news sources, investment banks and notable economists. </p>  
 
+
+
 _________________________________________________________________________________________________________________________________________________________________________________
 
 ###  <p align="center"> **PROBLEM**  </p>  
