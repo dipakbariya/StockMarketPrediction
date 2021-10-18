@@ -87,4 +87,4 @@ Accuracy mectrics we have used in this project are:
 * Dipak Bariya: [Linkedin](https://linkedin.com/in/dipak-bariya/)  [GitHub](https://github.com/dipakbariya/)
 * Harshit Singh: [GitHub](https://github.com/HarshuSingh)
 * Meet Panchal: [Linkedin](https://www.linkedin.com/in/meet-panchal011/) [GitHub](https://github.com/Meet-011)
-* Pratik Thakur: [GitHub](https://github.com/thakur-pratik)
+* Pratik Thakur: [Linkedin](https://www.linkedin.com/in/pratik-thakur-661506194/)  [GitHub](https://github.com/thakur-pratik)
