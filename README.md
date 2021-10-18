@@ -29,7 +29,8 @@ Out of the total tweets are examined by humans and annotated as 1 for Positive, 
 <p align="justify"> EDA includes extracting the twitter data based on the stock names viz, Apple, Tesla, Nvidia, Paypal and Microsoft, cleaning of twitter data that were pulled i.e., removing unnecessary data from tweets. After cleaning the data, below are the plots that were plotted against the sentiments that is Positive, Negative and Neutral. </p>
 
 >Most common positive words
-<p align="justify"> ![image](https://user-images.githubusercontent.com/63631974/137613734-4f797f13-9eb9-4bd1-955b-37e5e801d48e.png) </p>
+<p align="center">
+![image](https://user-images.githubusercontent.com/63631974/137613734-4f797f13-9eb9-4bd1-955b-37e5e801d48e.png) </p>
 
 
 >Most common negative words
