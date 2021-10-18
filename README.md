@@ -6,6 +6,8 @@ The stock market is one of the most sensitive fields, where the sentiments of th
 
 The volatile nature of the stock market has equal chances for earning money and losing money as well. But if the situation can be predicted, investors can make a profit or minimize their losses.
 
+>Actually, when a piece of news comes in the market, people start talking about and give their positive or negative opinions that show their sentiments. That can be used by the sentiment analysis experts to predict the movement of the stock market or particular stock of a company.
+
 On June 2015, 2016 debt negotiations between Greek Govt and its creditors borke off abrubptly. Large market movements as a concequence of political and economic headlines are hardly uncommon, liquid markets are most suspectable to swing when the news breaks. Using VIX as a proxy for market volatality, we investigate how macroeconoic headlines affect the changes. Here, we predict equity market value using tweets from major news sources, investment banks and notable economists.
 
 
@@ -14,6 +16,11 @@ On June 2015, 2016 debt negotiations between Greek Govt and its creditors borke 
 
 
 Twitter provides a plethora of market data. In this project we have extracted around 100,000 tweets from various accounts to predict the upward movements. Using this data we are researching how this economic news affects the market.
+
+The sentiment analysis task is very much field-specific. Tweets are classified as positive, negative, and neutral based on the sentiment present.
+Out of the total tweets are examined by humans and annotated as 1 for Positive, 0 for Neutral and 2 for Negative emotions. For the classification of nonhuman annotated tweets, a machine learning model is trained whose features are extracted from the human-annotated tweets.
+
+Except, in extreme or unexpected conditions, most of the time, machine learning or deep learning-based models predict at very high accuracy helping stock market investors to earn money.
 
 
 **Explaratory Data Analysis:**
