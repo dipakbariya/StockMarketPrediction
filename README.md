@@ -22,6 +22,7 @@ Out of the total tweets are examined by humans and annotated as 1 for Positive, 
 
 Except, in extreme or unexpected conditions, most of the time, machine learning or deep learning-based models predict at very high accuracy helping stock market investors to earn money.
 
+*********************************************************************************************************************************************************************************
 
 ### **EXPLARATORY DATA ANALYSIS**
 
@@ -35,7 +36,7 @@ EDA includes extracting the twitter data based on the stock names viz, Apple, Te
 ![image](https://user-images.githubusercontent.com/63631974/137613755-a28a127d-d35d-4239-bec5-61e2ed541a63.png)
 
 
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 ### **TYPE OF MACHINE LEARNING MODEL**
