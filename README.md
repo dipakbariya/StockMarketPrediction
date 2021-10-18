@@ -1,6 +1,6 @@
 # Prediction of Stock Market Price Using Macro Economic Headlines
 
-### <p align="right">  **INTRODUCTION** </p> 
+### <p align="center">  **INTRODUCTION** </p> 
 
 The stock market is one of the most sensitive fields, where the sentiments of the people can change the trend of the entire market. Actually, there are many factors, affect the movement of the stock market and, the sentiments of the traders are also one of them that drive the market.
 
