@@ -15,7 +15,7 @@ ________________________________________________________________________________
 ###  <p align="center"> **PROBLEM**  </p>  
 
 
-Twitter provides a plethora of market data. In this project we have extracted around 100,000 tweets from various accounts to predict the upward movements. Using this data we are researching how this economic news affects the market.
+<p align="justify"> Twitter provides a plethora of market data. In this project we have extracted around 100,000 tweets from various accounts to predict the upward movements. Using this data we are researching how this economic news affects the market. </p>
 
 <p align="justify"> The sentiment analysis task is very much field-specific. Tweets are classified as positive, negative, and neutral based on the sentiment present.
 Out of the total tweets are examined by humans and annotated as 1 for Positive, 0 for Neutral and 2 for Negative emotions. For the classification of nonhuman annotated tweets, a machine learning model is trained whose features are extracted from the human-annotated tweets. </p>
