@@ -75,15 +75,15 @@ Accuracy mectrics we have used in this project are:
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### <p align="center"> **LINKS**  </p>  
 * Application Link
-[https://stockpriceprediction0.herokuapp.com/] (Click Here)
+[Click Here](https://stockpriceprediction0.herokuapp.com/)
 
 * Demo Video
-[https://github.com/dipakbariya/StockMarketPrediction/blob/main/2021-10-16%2012-45-49.mkv] (Click Here)
+[Click Here](https://github.com/dipakbariya/StockMarketPrediction/blob/main/2021-10-16%2012-45-49.mkv)
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-### <p align="center"> **CONTACTS**  </p>  
+### <p align="center"> **TEAM MEMBERS & CONTACT DETAILS**  </p>  
 * Dipak Bariya: [Linkedin](https://linkedin.com/in/dipak-bariya/)
-* Harshit Singh:
+* Harshit Singh: 
 * Meet Panchal:
 * Pratik Thakur:
