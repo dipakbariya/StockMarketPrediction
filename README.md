@@ -1,6 +1,6 @@
 # Prediction of Stock Market Price Using Macro Economic Headlines
 
-### <p align="center">  INTRODUCTION </p> 
+### ** <p align="center">  INTRODUCTION </p>  **
 
 The stock market is one of the most sensitive fields, where the sentiments of the people can change the trend of the entire market. Actually, there are many factors, affect the movement of the stock market and, the sentiments of the traders are also one of them that drive the market.
 
@@ -12,7 +12,7 @@ On June 2015, 2016 debt negotiations between Greek Govt and its creditors borke 
 
 _________________________________________________________________________________________________________________________________________________________________________________
 
-### **PROBLEM**
+###  <p align="center"> **PROBLEM**
 
 
 Twitter provides a plethora of market data. In this project we have extracted around 100,000 tweets from various accounts to predict the upward movements. Using this data we are researching how this economic news affects the market.
