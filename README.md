@@ -46,9 +46,9 @@ METRICS USED: The performance of a regression model must be reported as an error
 
 Accuracy mectrics we have used in this project are:
 
-Root Mean Squared Error(RMSE) 
-Mean Absolute Error(MAE) 
-Rsquared value(r2) 
+* Root Mean Squared Error(RMSE) 
+* Mean Absolute Error(MAE) 
+* Rsquared value(r2) 
 
 ### **MODELLING**
 
@@ -65,10 +65,10 @@ We have deployed the model using Flask framework, as it is a opensource Python l
 
 
 ### **LINKS**
-Application Link
+* Application Link
 [https://stockpriceprediction0.herokuapp.com/](Click Here)
 
-Demo Video
+* Demo Video
 [https://github.com/dipakbariya/StockMarketPrediction/blob/main/2021-10-16%2012-45-49.mkv](Click Here)
 
 
