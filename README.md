@@ -2,12 +2,13 @@
 
 **INTRODUCTION**
 
+The stock market is one of the most sensitive fields, where the sentiments of the people can change the trend of the entire market. Actually, there are many factors, affect the movement of the stock market and, the sentiments of the traders are also one of them that drive the market.
+
+The volatile nature of the stock market has equal chances for earning money and losing money as well. But if the situation can be predicted, investors can make a profit or minimize their losses.
+
 On June 2015, 2016 debt negotiations between Greek Govt and its creditors borke off abrubptly. Large market movements as a concequence of political and economic headlines are hardly uncommon, liquid markets are most suspectable to swing when the news breaks. Using VIX as a proxy for market volatality, we investigate how macroeconoic headlines affect the changes. Here, we predict equity market value using tweets from major news sources, investment banks and notable economists.
 
 
-
-
-https://user-images.githubusercontent.com/63631974/137674039-0e918ec9-0b42-4481-aaf2-791d992b3ca4.mp4
 
 **Problem**
 
@@ -62,5 +63,7 @@ Application Link
 
 Demo Video
 [https://github.com/dipakbariya/StockMarketPrediction/blob/main/2021-10-16%2012-45-49.mkv](Click Here)
+
+
 
 
