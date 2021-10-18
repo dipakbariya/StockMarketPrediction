@@ -51,12 +51,14 @@ Accuracy mectrics we have used in this project are:
 * Mean Absolute Error(MAE) 
 * Rsquared value(r2) 
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### **MODELLING**
 
 We have implemented differnt ML models, i.e. Linear Regression, Random Forest Regression, Decision Tree Regressor, Support vector regressor. We have choosen Random Forest Regression model for our project as its r2 - 0.99964, rmse - 0.08. We have choosed Random Forest Regressor model as it classifies decision trees on various subsamples and uses averaging to imporve the predictive accuracy and control overfitting. So, our team decided to apply Random Forest Regression model for our project.
 
 ![image](https://user-images.githubusercontent.com/63631974/137613663-88e25be4-b40f-4876-87eb-2280d14a6ad3.png)
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### **DEPLOYMENT**
 
@@ -64,7 +66,7 @@ We have deployed the model using Flask framework, as it is a opensource Python l
 
 ![image](https://user-images.githubusercontent.com/63631974/137613691-93de716f-224e-4abf-ba58-fc7a9eac38ae.png)
 
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### **LINKS**
 * Application Link
 [https://stockpriceprediction0.herokuapp.com/](Click Here)
@@ -73,5 +75,5 @@ We have deployed the model using Flask framework, as it is a opensource Python l
 [https://github.com/dipakbariya/StockMarketPrediction/blob/main/2021-10-16%2012-45-49.mkv](Click Here)
 
 
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
