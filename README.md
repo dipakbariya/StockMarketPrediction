@@ -2,6 +2,7 @@
 
 ###  <p align="center">  INTRODUCTION </p>  
 
+
 <p align="justify"> The stock market is one of the most sensitive fields, where the sentiments of the people can change the trend of the entire market. Actually, there are many factors, affect the movement of the stock market and, the sentiments of the traders are also one of them that drive the market. </p>
 
 <p align="justify"> The volatile nature of the stock market has equal chances for earning money and losing money as well. But if the situation can be predicted, investors can make a profit or minimize their losses. </p>
