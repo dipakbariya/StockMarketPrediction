@@ -8,14 +8,16 @@
 <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.14.min.css" type="text/css"/>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 <script src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.14.min.js"></script>
   
 </head>
 
 <body>
  <div class="login">
-	<h1>Stock Price Prediction </h1>
+	<h1>STOCK PRICE PREDICTION USING MACRO HEADLINES </h1>
+	 <p>Machine learning model used to predict next day 
+    stock price based on<br>twitter sentiment analysis</p>
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
@@ -54,5 +56,14 @@
 <!-- 	<img src='/apple_stock.png'/> -->
 
 </body>
-
+<!-- <style>
+  body {
+    background-image: url('https://mediacloud.kiplinger.com/image/private/s--KvtEp0dc--/f_auto,t_primary-image-desktop@2/v1620416234/Investing/stock-market-today-050721.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    fill-opacity: 0.5; 
+  }
+  </style>  -->
 </html>
