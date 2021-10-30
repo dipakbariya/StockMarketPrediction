@@ -21,7 +21,7 @@ from bokeh.embed import components
 import base64
 
 #Initializing the application name [here, the name is app]
-app = Flask(__name__)
+app = Flask(__name__, template_folder = 'template')
 
 #Loading the model created in model.py
 #model = pickle.load(open('model.pkl', 'rb'))
